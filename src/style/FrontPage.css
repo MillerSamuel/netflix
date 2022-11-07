@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.d-flex{
+    display: flex;
+    align-items:flex-start;
+}
+
+
+/* Login */
+
+.backgroundImage{
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/b321426e-35ae-4661-b899-d63bca17648a/5dc5179a-ea88-4967-9161-4b7add5d71d6/US-en-20220926-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 75vh;
+}
+
+.logo{
+    height: 50px;
+    margin-left: 43px;
+    margin-top: 20px;
+}
+
+.sign-in{
+    background-color: red;
+    height: 35px;
+    width: 85px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    margin: 25px 40px;
+}
+
+.darken{
+    width: 100%;
+    height: 75vh;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.loginBody{
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 75px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.loginBody h1{
+    font-size: 3.7rem;
+    max-width: 640px;
+    margin: 0 auto;
+    color: white;
+
+}
+
+.loginBody h3{
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: white;
+}
+.loginBody p{
+    margin: 25px;
+    font-size: 1.2rem;
+    color: white;
+
+}
+
+.loginInput{
+    height: 50px;
+    min-width: 45%;
+    max-width: 550px;
+    padding-left: 25px; 
+    border: none;
+    outline-width: 0;
+}
+
+.loginButton{
+    height: 50px;
+    min-width: 200px;
+    background-color: #e50914;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.border{
+    background-color: #222;
+    width: 100%;
+    height: 8px;
+}
+
+.info{
+    background-color:#000 ;
+    min-height: 20vw;
+    display: flex;
+}
+
+.infoText{
+    text-align: center;
+    width: 30%;
+    margin: auto auto;
+}
+
+.infoText h1{
+    font-size: 35pt;
+    color: white;
+}
+
+.infoText h3{
+    font-weight: 400;
+    font-size: 18pt;
+    margin: 10px;
+    color: white;
+}
+
+.imgContainer{
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    width: 45%;
+}
+.animationContainer{
+    overflow: hidden;
+    position: relative;
+}
+.img{
+    position: relative;
+    z-index: 2
+}
+
+
+.animation2{
+    height: 100%;
+    left: 50%;
+    max-height: 51%;
+    max-width: 75%;
+    position: absolute;
+    top: 46%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.infoImage{
+    height:400px;
+    margin-bottom:25px;
+}
+
+.bottomLogin{
+    margin: 0 auto;
+    padding: 75px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    background-color: #000;
+    color: white;
+    font-weight: 400;
+    font-size: 18pt;
+}
+
+.bottomInput{
+    height: 50px;
+    min-width: 25%;
+    max-width: 350px;
+    padding-left: 25px; 
+    border: none;
+    outline-width: 0;
+}
