@@ -8,13 +8,12 @@ import Register from './components/Register';
 import Profile from './components/Profile';
 import { onAuthStateChanged } from 'firebase/auth';
 import {auth} from "./firebase"
-import { useDispatch, useSelector } from 'react-redux';
-import { login, logout, selectUser } from './features/counter/userSlice';
+import { useDispatch } from 'react-redux';
+import { login, logout } from './features/counter/userSlice';
 
 function App() {
 
   const dispatch= useDispatch();
-  const user=useSelector(selectUser)
 
   useEffect(()=>{
     const unsub=onAuthStateChanged(auth,user=>{
@@ -26,12 +25,12 @@ function App() {
         }))
       }
       else{
-        dispatch(logout);
+        dispatch(logout());
         console.log("not logged in");
       }
     });
     return unsub;
-  },[]);
+  },[dispatch]);
 
   return (
     <div className="App">

@@ -31,7 +31,7 @@ const SignUp = () => {
                 </div>
                 <div className="formContainer">
                     <form className="signInForm">
-                        <h1>Sign In</h1>
+                        <h1 style={{color:"white"}}>Sign In</h1>
                         <input ref={emailRef} type="email" placeholder="Email" />
                         <input ref={passwordRef} type="password" placeholder="Password" />
                         <input onClick={signIn} className="submitButton" type="submit" value="Sign In" />

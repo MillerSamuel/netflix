@@ -47,6 +47,16 @@
     cursor: pointer;
 }
 
+.logout{
+    background-color: red;
+    height: 35px;
+    width: 85px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    margin: 15px 40px;
+}
+
 /* Featured */
 
 .featured{

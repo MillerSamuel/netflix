@@ -35,7 +35,7 @@ const Register = () => {
                 </div>
                 <div className="formContainer">
                     <form className="signInForm">
-                        <h1>Register</h1>
+                        <h1 style={{color:"white"}}>Register</h1>
                         <input ref={emailRef} type="email" placeholder="Email" />
                         <input ref={passwordRef} type="password" placeholder="Password" />
                         <input onClick={register} className="submitButton" type="submit" value=" Register" />
