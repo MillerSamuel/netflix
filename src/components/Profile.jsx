@@ -5,7 +5,7 @@ import { selectUser } from "../features/counter/userSlice";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import db from "../firebase";
-import { collection, QuerySnapshot } from "firebase/firestore";
+import { collection, CollectionReference, doc, DocumentSnapshot, QuerySnapshot } from "firebase/firestore";
 import { useState } from "react";
 
 const Profile = () => {
@@ -15,23 +15,11 @@ const Profile = () => {
     const user = useSelector(selectUser)
 
     useEffect(()=>{
-        collection("products")
-        .where("active","==", "true")
-        .get()
-        .then((querySnapshot)=>{
-            const products={};
-            querySnapshot.forEaach(async productDoc=>{
-                products[productDoc.id]=productDoc.data();
-                const  priceSnap=await productDoc.ref.collection("prices").get();
-                priceSnap.Docs.forEach(price=>{
-                    products[productDoc.id].prices={
-                        priceId:price.id,
-                        priceData: price.data()
-                    }
-                })
-            });
-            setProducts(products)
-        });
+    
+        collection(db,"products")
+        
+        console.log(allProducts);
+        
     },[])
 
 
