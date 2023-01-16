@@ -6,6 +6,7 @@ import FrontPage from './components/FrontPage';
 import SignUp from './components/SignUp';
 import Register from './components/Register';
 import Profile from './components/Profile';
+import ErrorPage from './components/ErrorPage';
 import { onAuthStateChanged } from 'firebase/auth';
 import {auth} from "./firebase"
 import { useDispatch } from 'react-redux';
@@ -18,7 +19,7 @@ function App() {
   useEffect(()=>{
     const unsub=onAuthStateChanged(auth,user=>{
       if(user){
-        console.log("user is",user);
+        // console.log("user is",user);
         dispatch(login({
           uid:user.uid,
           email:user.email
@@ -26,7 +27,7 @@ function App() {
       }
       else{
         dispatch(logout());
-        console.log("not logged in");
+        // console.log("not logged in");
       }
     });
     return unsub;
@@ -39,9 +40,9 @@ function App() {
           <Route path="/" element={<FrontPage/>}/>
           <Route path="/View" element={<MainScreen/>}/>
           <Route path="/SignIn" element={<SignUp/>}/>
-          <Route path="/Register" element={<Register/>} text={"Register"}/>
+          <Route path="/Register" element={<Register/>} />
           <Route path="/Profile" element={<Profile/>}/>
-          <Route path="*" element={<>404 page not found</>}/>
+          <Route path="*" element={<ErrorPage/>}/>
         </Routes>
       </Router>
     </div>

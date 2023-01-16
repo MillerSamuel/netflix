@@ -14,7 +14,7 @@ const SignUp = () => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value
         ).then((authUser) => {
-            console.log(authUser)
+            // console.log(authUser)
             navigate("/View")
         }).catch((error) => {
             console.log(error)

@@ -1,10 +1,18 @@
 import React from "react";
+import { useEffect } from "react";
 import {Link} from "react-router-dom";
-import "../style/FrontPage.css"
+import { auth } from "../firebase";
+import "../style/FrontPage.css";
+import disableScroll from "disable-scroll"
 
 
 const FrontPage = () => {
     
+
+    useEffect(()=>{
+        auth.signOut();
+        disableScroll.off();
+    },[])
 
     return (
         <div className="frontPage">

@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
 }
 
 /* Colors */
-.black{
+.black {
     background-color: rgb(20 20 20);
 
 }
@@ -14,7 +14,7 @@
 
 
 
-.d-flex{
+.d-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@
 
 /* NavBar */
 
-.NavBar{
+.NavBar {
     position: fixed;
     height: 75px;
     width: 100%;
@@ -33,21 +33,21 @@
     transition: all 0.5s;
 }
 
-.logoNav{
+.logoNav {
     height: 55px;
     cursor: pointer;
     margin-left: 25px;
     margin-top: 10px;
 }
 
-.avatar{
+.avatar {
     height: 50px;
-    margin:10px 25px;
+    margin: 10px 25px;
     border-radius: 10%;
     cursor: pointer;
 }
 
-.logout{
+.logout {
     background-color: red;
     height: 35px;
     width: 85px;
@@ -59,24 +59,24 @@
 
 /* Featured */
 
-.featured{
+.featured {
     position: relative;
     height: 85vh;
     object-fit: contain;
 }
 
-.featureInfo{
+.featureInfo {
     padding-top: 23vh;
     padding-left: 5vw;
     color: white;
     width: 38%;
 }
 
-.movieTitle{
+.movieTitle {
     font-size: 45pt;
 }
 
-.playButton{
+.playButton {
     color: rgb(0, 0, 0);
     background-color: white;
     height: 40px;
@@ -86,26 +86,25 @@
     border: none;
     border-radius: 4px;
 }
-.description{
+
+.description {
     font-size: 1.2rem;
     padding-top: 15px;
     padding-bottom: 15px;
     font-weight: 600;
 }
 
-.fade{
-    background-image: linear-gradient(
-        180deg,
-        transparent,rgba(20,20,20,0.4),
-        rgb(20,20,20)
-    );
+.fade {
+    background-image: linear-gradient(180deg,
+            transparent, rgba(20, 20, 20, 0.4),
+            rgb(20, 20, 20));
     position: absolute;
     bottom: 0;
     min-height: 150px;
     min-width: 99vw;
 }
 
-.darkenFeature{
+.darkenFeature {
     width: 100%;
     height: 85vh;
     background-color: rgba(0, 0, 0, 0.55);
@@ -113,25 +112,25 @@
 
 /* Row */
 
-.row{
+.row {
     background-color: rgb(20 20 20);
     padding-left: 20px;
-    
+
 }
 
-.title{
+.title {
     font-size: 20pt;
     margin-left: 20px;
     padding-top: 50px;
     color: white;
 }
 
-.allMovies{
+.allMovies {
     display: flex;
     overflow-x: scroll;
 }
 
-.movie{
+.movie {
     width: 10vw;
     max-height: 230px;
     margin: 20px;
@@ -139,6 +138,51 @@
     cursor: pointer;
 }
 
-.movie:hover{
+.movie:hover {
     transform: scale(1.15);
+}
+
+.error {
+    position: fixed;
+    top: 0;
+    height: 450px;
+    width: 450px;
+    margin: 10% 35%;
+    border-radius: 8pt;
+    background-color: black;
+    border: 2px rgba(175, 5, 5, 0.705) solid;
+    opacity: 1;
+}
+
+
+.dim{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    height: 1000%;
+    background-color: black;
+    opacity: 0.4;
+}
+
+.noSub {
+    position: fixed;
+    top: 0;
+    height: 250px;
+    width: 450px;
+    margin: 10% 35%;
+    border-radius: 8pt;
+    background-color: black;
+    border: 2px red solid;
+    opacity: 1;
+}
+
+.profileButton{
+    background-color: red;
+    height: 35px;
+    width: 85px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    margin: 25px 40px;
 }

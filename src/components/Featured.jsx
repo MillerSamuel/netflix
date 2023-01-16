@@ -33,14 +33,13 @@ const Featured = () => {
     return (
             <header className="featured" style={{
                 backgroundSize: "cover",
-                backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`,
+                backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
                 backgroundPosition:"center center"
             }}>
                 <div className="darkenFeature">
                     <div className="featureInfo">
                         <h1 className="movieTitle">{movie?.name}</h1>
                         <p className="description">{shortenDescription(movie?.overview)}</p>
-                        <button className="playButton">Play</button>
                     </div>
                 <div className="fade"></div>
                 </div>

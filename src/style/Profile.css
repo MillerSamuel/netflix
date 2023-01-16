@@ -27,7 +27,6 @@
 .avatar2 {
     height: 100px;
     margin: 10px 0;
-    cursor: pointer;
 }
 
 .profileContainer {
@@ -62,10 +61,22 @@
 
 .subscribe {
     background-color: red;
-    height: 35px;
-    width: 85px;
+    height: 40px;
+    width: 100px;
     cursor: pointer;
     border-radius: 2px;
     border: 0;
     margin: 15px 40px;
+}
+
+.loading{
+    position: fixed;
+    height: 250px;
+    width: 250px;
+    margin: 35vh 40vw;
+    font-size: 25pt;
+    opacity: 0.95;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
 }
