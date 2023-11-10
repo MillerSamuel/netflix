@@ -32,39 +32,61 @@ const Row = ({ title, url }) => {
     }
 
 
-
     const trailerHandler = async (movie) => {
         // for (const [key, value] of Object.entries(movie)) {
         //     console.log(`${key}: ${value}`);
         // }
-        if (subscription.plan != null) {
-            if (error) {
-                setError(!error);
-                disableScroll.off();
-            }
-            else {
-                if (trailerUrl) {
-                    setTrailerUrl("")
+
+        //STRIPE IS DEPRECATED, DISABLING SUBSCRIPTION CHECK FOR EASE OF ACCESS
+    //     if (subscription.plan !== null) {
+    //         if (error) {
+    //             setError(!error);
+    //             disableScroll.off();
+    //         }
+    //         else {
+    //             if (trailerUrl) {
+    //                 setTrailerUrl("")
+    //             }
+    //             else {
+    //                 movieTrailer(null, { tmdbId: movie.id, multi: false })
+    //                     .then(response => {
+    //                         const urlParams = new URLSearchParams(new URL(response).search);
+    //                         setTrailerUrl(urlParams.get("v"));
+    //                     })
+    //                     .catch(() => {
+    //                         setError(!error)
+    //                         disableScroll.on();
+    //                     })
+    //             }
+    //         }
+    //     }
+    //     else {
+    //         setNoSub(true);
+    //         disableScroll.on();
+    //     }
+    // }
+    
+                if (error) {
+                    setError(!error);
+                    disableScroll.off();
                 }
                 else {
-                    movieTrailer(null, { tmdbId: movie.id, multi: false })
-                        .then(response => {
-                            const urlParams = new URLSearchParams(new URL(response).search);
-                            setTrailerUrl(urlParams.get("v"));
-                        })
-                        .catch(() => {
-                            setError(!error)
-                            disableScroll.on();
-                        })
+                    if (trailerUrl) {
+                        setTrailerUrl("")
+                    }
+                    else {
+                        movieTrailer(null, { tmdbId: movie.id, multi: false })
+                            .then(response => {
+                                const urlParams = new URLSearchParams(new URL(response).search);
+                                setTrailerUrl(urlParams.get("v"));
+                            })
+                            .catch(() => {
+                                setError(!error)
+                                disableScroll.on();
+                            })
+                    }
                 }
-            }
         }
-        else {
-            setNoSub(true);
-            disableScroll.on();
-        }
-
-    }
 
 
 
@@ -85,7 +107,6 @@ const Row = ({ title, url }) => {
                     })
                 })
         }
-
     }, [])
 
     return (
@@ -96,7 +117,7 @@ const Row = ({ title, url }) => {
                     <img onClick={() => trailerHandler(movie)} key={movie.id} className="movie" src={`https://image.tmdb.org/t/p/w154/${movie?.poster_path}`} alt="" />
                 ))}
             </div>
-            {trailerUrl != "" && <YouTube videoId={trailerUrl} opts={opts}></YouTube>}
+            {trailerUrl !== "" && <YouTube videoId={trailerUrl} opts={opts}></YouTube>}
             {error &&
                 <div className="error">
                     <div className="dim" onClick={() => trailerHandler(null)}></div>
@@ -105,7 +126,7 @@ const Row = ({ title, url }) => {
             }
             {noSub &&
                 <div className="noSub">
-                    <p style={{ margin: "25px", fontSize: "20pt" }}>You have not yet subscribed to a payment plan. Please choose a plan to use our service!</p>
+                    <p style={{ margin: "25px", fontSize: "20pt", color:"white" }}>You have not yet subscribed to a payment plan. Please choose a plan to use our service!</p>
                     <button className="profileButton" onClick={() => navigate("/profile")}>View Profile</button>
                 </div>
             }

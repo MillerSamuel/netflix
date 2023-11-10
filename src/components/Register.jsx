@@ -22,7 +22,7 @@ const Register = () => {
             navigate("/View");
         }).catch((error) => {
             console.log(error)
-            alert("Invalid credentials")
+            alert("Invalid Email or Password")
         })
     }
 

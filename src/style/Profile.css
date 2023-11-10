@@ -37,10 +37,10 @@
 
 .profileEmail {
     background-color: #808080;
+    font-size: 18pt;
     height: 40px;
     width: 100%;
     padding: 5px 20px;
-    font-size: 15pt;
 }
 
 .planHeader {
@@ -61,6 +61,7 @@
 
 .subscribe {
     background-color: red;
+    color: white;
     height: 40px;
     width: 100px;
     cursor: pointer;

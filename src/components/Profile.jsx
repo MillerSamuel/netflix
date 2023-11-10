@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import db from "../firebase";
 import { collection, CollectionReference, doc, DocumentSnapshot, getDoc, query, where, getDocs, addDoc, onSnapshot } from "firebase/firestore";
 import { useState } from "react";
-import { async } from "@firebase/util";
 import { loadStripe } from "@stripe/stripe-js";
 import Loading from "./Loading";
 import disableScroll from "disable-scroll";
@@ -129,6 +128,7 @@ const Profile = () => {
                                             <p>{productData.name}</p>
                                             <p>{productData.description}</p>
                                         </div>
+                                        
                                         <button className="subscribe" onClick={() => checkout(productData.prices.priceId)}>Subscribe</button>
                                     </div>
                                 )

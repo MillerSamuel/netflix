@@ -13,11 +13,16 @@ const MainScreen=()=>{
     const user = useSelector(selectUser);
     const navigate=useNavigate();
 
-    useEffect(()=>{
-        disableScroll.off();
+    const signoutHandler=()=>{
         if(user==null){
             navigate("/SignIn")
         }
+    }
+    useEffect(()=>{
+        disableScroll.off();
+        setTimeout(
+            signoutHandler,500
+        )
     },[])
 
     return(
